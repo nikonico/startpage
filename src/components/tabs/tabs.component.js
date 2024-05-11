@@ -25,7 +25,7 @@ class Links extends Component {
               ${
           links.map((link) => `
                   <div class="link-info">
-                    <a href="${link.url}">
+                    <a href="${link.url}" data-key="${link.key || ''}">
                       ${Links.getIcon(link)}
                       ${
             link.name ? `<p class="link-name">${link.name}</p>` : ""
@@ -313,11 +313,11 @@ class Tabs extends Component {
   template() {
     return `
       <div id="links" class="-">
+      <search-bar></search-bar>
 
         <div id="panels">
           <div class="categories">
             ${Category.getAll(this.tabs)}
-            <search-bar></search-bar>
             <config-tab></config-tab>
           </div>
           <status-bar class="!-"></status-bar>

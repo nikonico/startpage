@@ -57,11 +57,13 @@ body {
 
 tabs-list {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
 #todo {
+    position: absolute;
+    right: 5px;
     width: 20%;
 }
 

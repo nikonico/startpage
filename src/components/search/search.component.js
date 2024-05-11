@@ -16,24 +16,21 @@ class Search extends Component {
   style() {
     return `
       #search {
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: calc(100% - 2px);
-          height: 100%;
-          background: rgb(24 24 29 / 80%);
-          z-index: 99;
-          visibility: hidden;
-          top: -100%;
-          backdrop-filter: blur(5px);
-          transition: all .2s ease-in-out;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 120px;
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        backdrop-filter: blur(5px);
+        transition: all .2s ease-in-out;
       }
 
-      #search.active {
-          top: 0;
-          visibility: visible;
-      }
+
 
       #search div {
           position: relative;

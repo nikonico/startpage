@@ -39,6 +39,7 @@ const default_config = {
             url: "https://www.nytimes.com/",
             icon: "brand-nytimes",
             icon_color: "#190606",
+            key:"n"
           },
           {
             name: "Le Temps",
@@ -288,5 +289,15 @@ window.addEventListener('load', (event) => {
   // Votre code ici
   search = document.querySelector('tabs-list').shadowRoot.querySelector('search-bar').shadowRoot.querySelector("#search");
   search.classList.add("active");
-  setTimeout(() => search.querySelector("input").focus(), 100);
+  //setTimeout(() => search.querySelector("input").focus(), 100);
 });
+// document.addEventListener('DOMContentLoaded', function() {
+//   window.onkeydown = function(e) {
+//     console.log(e.key);
+//     const key = e.key.toLowerCase();
+//     const link = document.querySelector('tabs-list').shadowRoot.querySelector(`a[data-key="${key}"]`);
+//     if (link && document.querySelector('tabs-list').shadowRoot.querySelector('search-bar').shadowRoot.activeElement.tagName.toLowerCase() !== "input") {
+//       window.location.href = link.href;
+//     }
+//   };
+// });

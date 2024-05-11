@@ -328,6 +328,13 @@ class Statusbar extends Component {
       );
       // Votre code pour la flèche droite ici
     }
+    console.log(document.querySelector('tabs-list'))
+
+    const link = document.querySelector('tabs-list').shadowRoot.querySelector(`a[data-key="${key}"]`);
+    console.log(link);
+    if (link) {
+      window.location.href = link.href;
+    }
   }
 
   activateByKey(key) {
