@@ -1,5 +1,4 @@
 
-
 This start page is based on the [dawn](https://github.com/b-coimbra/dawn) and [tartarus-startpage](https://github.com/AllJavi/tartarus-startpage) repository, which has even more functionality. I've tweaked the page's style a bit to match my [dotfiles](https://github.com/AllJavi/tartarus-dotfiles), and I've added some features to make it more comfortable.
 
 ## ⌨️ Keybindings
@@ -10,8 +9,6 @@ This start page is based on the [dawn](https://github.com/b-coimbra/dawn) and [t
 | <kbd>q</kbd>                           | Config Dialog (new)           |
 | <kbd>Esc</kbd>                           | Close Dialogs            |
 
-## ⚙️ Configuration Dialog
-![config-dialog](https://github.com/AllJavi/tartarus-startpage/assets/49349604/3b42c650-b5bb-4a7d-a358-cfa5a8915966)
 
 The default configuration file is [userconfig.js](userconfig.js), but you can change it in the configuration dialog. You can find more information about how the file works in the [original repository](https://github.com/b-coimbra/dawn). The available components are tabs, a clock, and weather.
 
@@ -19,8 +16,6 @@ Additionally, there are two different new options:
 - `fastlink`: To set the link of the Pokeball button.
 - `localIcons`: To optimize the loading time of the icons, you can check it out [here](#local-icons).
 
-## 🔍 Search Dialog
-![search-dialog](https://github.com/AllJavi/tartarus-startpage/assets/49349604/3f76323d-88c4-41b6-b93d-e4cceb1780b7)
 
 The search dialog allows you to display a search bar with various search engines defined in the configuration. To select each one, you simply need to prefix the query with the corresponding `!<id>`.
 By default, the defined search engines are:
