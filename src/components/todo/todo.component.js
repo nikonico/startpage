@@ -488,12 +488,12 @@ class Todo extends Component {
       .add-todo-panel {
           position: absolute;
           flex-wrap: wrap;
-          top: -335px;
+          top: -340px;
           width: 400px;
           background: #282828;
           transition: top .5s;
           padding: 0 1.5em 1em;
-          z-index: 9;
+          z-index: 99;
       }
 
       .add-todo-panel input[type="text"],
@@ -1000,11 +1000,13 @@ class Todo extends Component {
 
   template() {
     return `
+
+      <link href="src/css/tabler-icons.min.css" rel="stylesheet">
       <div class="add-todo-panel">
         <div class="create-task-header heading">
           <h1 class="create-task-header-title">Create task</h1>
           <button class="+ task-option heading-close close-create-task-panel">
-            <i class="material-icons">close</i>
+            <i class="ti ti-x">close</i>
           </button>
         </div>
         <form class="create-task-form">
@@ -1018,7 +1020,7 @@ class Todo extends Component {
           </label>
           <label>
             <input class="create-task-field create-task-url" name="url" required></input>
-            <p><i class="material-icons create-task-url-icon">link</i><span>URL</span></p>
+            <p><i class="ti ti-link">link</i><span>URL</span></p>
           </label>
           <label>
             <input type="datetime-local" class="create-task-field create-task-reminder" name="reminder" required></input>
@@ -1036,14 +1038,14 @@ class Todo extends Component {
           <p class="+ header-title">todo</p>
           <div class="task-actions">
             <button class="+ add-task task-action" title="Add new task">
-              <i class="material-icons add-task-icon">add</i>
+              <i class="ti ti-plus add-task-icon">add</i>
             </button>
             <div class="+ counter task-action">
               <button class="+ todo-count">0</button>|
               <button class="+ done-count">0</button>
             </div>
             <button class="+ clean-tasks task-action" title="Clear all tasks">
-              <i class="material-icons clean-tasks-icon">clear_all</i>
+              <i class="ti ti-clear-all clean-tasks-icon">clear_all</i>
             </button>
           </div>
         </div>

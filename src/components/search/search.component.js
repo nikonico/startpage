@@ -113,7 +113,6 @@ class Search extends Component {
       <div id="search">
         <div>
           <input type="text" spellcheck="false" placeholder="search" autofocus="true">
-          <button class="close"><i class="material-icons">&#xE5CD;</i></button>
           <ul class="search-engines"></ul>
         </div>
       </div>

@@ -29,38 +29,43 @@ const default_config = {
   openLastVisitedTab: true,
   tabs: [
     {
-      name: "chi ll",
+      name: "chill",
       background_url: "src/img/banners/cbg-3.gif",
-      categories: [{
-        name: "News",
-        links: [
-          {
-            name: "NYT",
-            url: "https://www.nytimes.com/",
-            icon: "brand-nytimes",
-            icon_color: "#190606",
-            key:"n"
-          },
-          {
-            name: "Le Temps",
-            url: "https://www.letemps.ch/",
-            icon: "news",
-            icon_color: "#AD3F5A",
-          },
-          {
-            name: "The Atlentic",
-            url: "https://www.theatlantic.com/",
-            icon: "news",
-            icon_color: "#c94448",
-          },
-          {
-            name: "The Guardian",
-            url: "https://www.theguardian.com/",
-            icon: "brand-guardian",
-            icon_color: "#2885bd",
-          },
-        ],
-      }, 
+      categories: [
+        {
+          name: "Always",
+          links: [
+            {
+              name: "HEP",
+              url: "https://elearning.hepl.ch/login/index.php",
+              icon: "skull",
+              icon_color: "#7daea3",
+              key : "h",
+            },
+            {
+              name: "Le Temps",
+              url: "https://www.letemps.ch/",
+              icon: "news",
+              icon_color: "#AD3F5A",
+              key : "t",
+            },
+            {
+              name: "Porn",
+              url: "https://www.reddit.com/r/unixporn/",
+              icon: "brand-reddit",
+              icon_color: "#ff8a2b",
+              key : "p",
+            },
+            {
+              name: "Deepl",
+              url: "https://www.deepl.com//",
+              icon: "language-hiragana",
+              icon_color: "#436e96",
+              key : "d",
+            },
+          ],
+        },
+        
       {
         name: "Video",
         links: [
@@ -69,6 +74,7 @@ const default_config = {
             url: "https://www.youtube.com/",
             icon: "brand-youtube",
             icon_color: "#c94448",
+            key : "y",
           },
           {
             name: "Netflix",
@@ -92,12 +98,14 @@ const default_config = {
             url: "https://www.animepahe.com",
             icon: "brand-funimation",
             icon_color: "#a9b665",
+            key : "a",
           },
           {
             name: "Manhwa",
             url: "https://asuratoon.com/",
             icon: "karate",
             icon_color: "#e78a4e",
+            key: "m",
           },
           {
             name: "Manga",
@@ -117,16 +125,25 @@ const default_config = {
           name: "Uni",
           links: [
             {
-              name: "SOAS",
-              url: "https://ble.soas.ac.uk/login/index.php",
+              name: "ISO",
+              url: "https://elearning.hepl.ch/course/view.php?id=1289",
               icon: "gender-genderfluid",
               icon_color: "#ea6962",
+              key : "i",
             },
             {
-              name: "HEP",
-              url: "https://elearning.hepl.ch/login/index.php",
+              name: "FLS",
+              url: "https://elearning.hepl.ch/course/view.php?id=1286",
               icon: "skull",
               icon_color: "#7daea3",
+              key : "f",
+            },
+            {
+              name: "Creativity",
+              url: "https://elearning.hepl.ch/course/view.php?id=977",
+              icon: "skull",
+              icon_color: "#7daea3",
+              key : "c",
             },
           ],
         },
@@ -153,6 +170,29 @@ const default_config = {
             },
           ],
         },
+        {
+          name: "News",
+          links: [
+            {
+              name: "NYT",
+              url: "https://www.nytimes.com/",
+              icon: "brand-nytimes",
+              icon_color: "#190606",
+            },
+            {
+              name: "The Atlentic",
+              url: "https://www.theatlantic.com/",
+              icon: "news",
+              icon_color: "#c94448",
+            },
+            {
+              name: "The Guardian",
+              url: "https://www.theguardian.com/",
+              icon: "brand-guardian",
+              icon_color: "#2885bd",
+            },
+          ],
+        }, 
       ],
     },
     {
@@ -224,12 +264,12 @@ const default_config = {
       background_url: "src/img/banners/cbg-12.gif",
       categories: [
         {
-          name: "mails",
+          name: "Others",
           links: [
             {
-              name: "gmail",
-              url: "https://mail.google.com/mail/u/0/",
-              icon: "brand-gmail",
+              name: "SOAS",
+              url: "https://ble.soas.ac.uk/login/index.php",
+              icon: "gender-genderfluid",
               icon_color: "#ea6962",
             },
           ],
