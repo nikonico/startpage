@@ -1,9 +1,86 @@
 ## NixOS script
+### Module
 
 ```
-adas
-adad
+{ config, lib, pkgs, ... }:
+
+with lib;
+
+let
+  cfg = config.services.myGitRepo;
+in
+{
+  options.services.myGitRepo = {
+    enable = mkEnableOption "Enable myGitRepo service";
+
+    repository = mkOption {
+      type = types.str;
+      default = "https://github.com/monrepo.git";
+      description = "URL of the git repository to clone.";
+    };
+
+    directory = mkOption {
+      type = types.str;
+      default = "/home/plop/test";
+      description = "The directory where the git repository will be cloned.";
+    };
+  };
+
+  config = mkIf cfg.enable {
+    systemd.services.myGitRepo = {
+      description = "Git Repo Cloner";
+      after = [ "network.target" ];
+      wantedBy = [ "multi-user.target" ];
+
+      path = [ pkgs.git ]; # Ajouter Git au chemin d'accès du service
+
+      script = ''
+        mkdir -p ${cfg.directory}
+        cd ${cfg.directory}
+        if [ ! -d .git ]; then
+          git clone ${cfg.repository} .
+        else
+          git pull
+        fi
+        chmod -R 777 ${cfg.directory}
+      '';
+
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = true;
+      };
+    };
+
+    # Configuration Apache
+    services.httpd = {
+      enable = true;
+      adminAddr = "admin@example.com";
+      virtualHosts = {
+        "localhost" = {
+          serverAliases = [ "localhost" ];
+          documentRoot = cfg.directory;  
+          extraConfig = ''
+            DirectoryIndex index.php index.html
+            <Directory "${cfg.directory}">
+              AllowOverride All
+              Require all granted
+            </Directory>
+          '';
+        };
+      };
+    };
+  };
+}
 ```
+### Usage
+```
+  services.myGitRepo = {
+    enable = true; 
+    repository = "https://github.com/nikonico/startpage"; 
+    directory = "/var/www"; # Path
+  };
+```
+
 
 
 https://github.com/AllJavi/tartarus-startpage/assets/49349604/9a2a3f4c-33ef-4eb3-9243-cc160a56a181
