@@ -1,9 +1,9 @@
 ## NixOS script
 
-'''
+```
 adas
 adad
-'''
+```
 
 
 https://github.com/AllJavi/tartarus-startpage/assets/49349604/9a2a3f4c-33ef-4eb3-9243-cc160a56a181
